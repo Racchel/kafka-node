@@ -49,7 +49,9 @@ async function run() {
         },  
     });
     
-    app.listen(3333)
+    app.listen(3333, () => 
+        console.log('App is running in http://localhost:3333')
+    )
 }
 
 run().catch(console.error);  

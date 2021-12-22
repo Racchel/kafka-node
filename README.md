@@ -1,23 +1,13 @@
-# Micro-serviço com Node.js
+## Como rodar?
 
-- Utilizando Kafka;
-- Utilizando Node;
+1. docker-compose up
 
-## Fluxo da aplicação
+2. cd api
+    1. yarn install
+    2. yarn dev
 
-- API principal (Station);
-- Geração de certificados;
+3. cd beneficiary
+    1. yarn install 
+    2. yarn dev
 
-## Fluxo
-- API principal envia uma mensagem pro serviço de certificado para gerar o certificado;
-- Micro-serviço de certificado devolve uma resposta (síncrona/assíncrona);
-
-Se conseguir síncrona/assíncrona:
-
-- Receber uma resposta assíncrona de quando o email com o certificado foi enviado;
-
-## O que sabemos?
-
-- REST (latência = tempo de resposta);
-- Redis/ RabbitMQ / **Kafka**;
-- Nubenk, Uber, Paypal, Netflix;
+4. Enviar um POST para http://localhost:3333 com os dados contidos em 'data.json' 
